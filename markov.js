@@ -17,13 +17,21 @@ class MarkovMachine {
    *  {"the": ["cat", "hat"], "cat": ["in"], "in": ["the"], "hat": [null]} */
 
   makeChains() {
-    // TODO
+    let chains = new Map();
+
+    for (let i = 0; i < this.words.length; i += 1) {
+      let word = this.words[i];
+      let nextWord = this.words[i + 1] || null;
+
+      if (chains.has(word)) chains.get(word).push(nextWord);
+      else chains.set(word, [nextWord]);
+    }
+
+    this.chains = chains;
   }
 
-
-  /** return random text from chains */
-
-  makeText(numWords = 100) {
-    // TODO
-  }
 }
+
+module.exports = {
+  MarkovMachine,
+};

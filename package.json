@@ -1,0 +1,23 @@
+{
+  "name": "node-markov",
+  "version": "1.0.0",
+  "description": "",
+  "main": "makeText.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/williamthethird/NodeMarkov.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/williamthethird/NodeMarkov/issues"
+  },
+  "homepage": "https://github.com/williamthethird/NodeMarkov#readme",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
