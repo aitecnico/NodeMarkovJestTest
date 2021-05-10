@@ -3,13 +3,14 @@ const { MarkovMachine } = require("./markov");
 
 describe('markov machine', function () {
   test('makes chains', function () {
-    let mm = new MarkovMachine("aa bb cc aa BB aa BB");
+    let mm = new MarkovMachine("aa bb cc aa BB aa BB dd");
 
     expect(mm.chains).toEqual(new Map([
       ["aa", ["bb", "BB", "BB"]],
       ["bb", ["cc"]],
       ["cc", ["aa"]],
-      ["BB", ["aa", null]]]));
+      ["BB", ["aa", "dd"]],
+      ["dd", [null]]]));
   });
 
   test('choice picks from array', function () {
@@ -45,6 +46,8 @@ describe('markov machine', function () {
     expect([1, 2]).toContain(outputWords.length);
   });
 });
+
+
 
 
 
